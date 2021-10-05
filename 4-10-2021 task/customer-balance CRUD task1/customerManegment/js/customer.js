@@ -100,7 +100,7 @@ withdrawBalance.addEventListener('submit', function(e){
         let customer = {
             cust_id: withdrawBalance.elements.cust_id.value,
             name : withdrawBalance.elements.name.value,
-            balance :(customers[i].balance >1000)?(customers[i].balance-withdrawBalance.elements.withdraw.value):customers[i].balance
+            balance :(customers[i].balance >withdrawBalance.elements.withdraw.value)?(customers[i].balance-withdrawBalance.elements.withdraw.value):customers[i].balance
         }
         customers[i]=customer
         saveDataToStorage(customers)
@@ -112,7 +112,7 @@ withdrawBalance.addEventListener('submit', function(e){
         let customer = {
             cust_id: addBalance.elements.cust_id.value,
             name : addBalance.elements.name.value,
-            balance :(customers[i].balance >=0)?(customers[i].balance+addBalance.elements.addB.value):customers[i].balance
+            balance :(customers[i].balance <=10000)?(customers[i].balance+addBalance.elements.addB.value):customers[i].balance
         }
         customers[i]=customer
         saveDataToStorage(customers)
