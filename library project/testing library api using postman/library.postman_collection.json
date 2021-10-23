@@ -1,0 +1,3834 @@
+{
+	"info": {
+		"_postman_id": "83a05b97-00cb-44ad-aa34-98a651146431",
+		"name": "library",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"yasmin\",\"password\":\"123456789\",\"email\":\"yasmin@gmail.com\",\"phone\":\"01111111111\",\"age\":\"24\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"yasmin\",\"password\":\"123456789\",\"email\":\"yasmin@gmail.com\",\"phone\":\"01111111111\",\"age\":\"24\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "280"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"118-12GCKmTgyg6sf5Mn9tXXtraq/yw\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 21 Oct 2021 00:16:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"message\": \"registered\",\n    \"data\": {\n        \"bookId\": [],\n        \"name\": \"yasmin\",\n        \"email\": \"yasmin@gmail.com\",\n        \"phone\": \"01111111111\",\n        \"userType\": \"user\",\n        \"age\": 24,\n        \"status\": false,\n        \"_id\": \"6170b179f957f8f8efb0cbed\",\n        \"createdAt\": \"2021-10-21T00:16:57.536Z\",\n        \"updatedAt\": \"2021-10-21T00:16:57.536Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"email\":\"yasmin@gmail.com\"\r\n,\"password\":\"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"email\":\"yasmin@gmail.com\"\r\n,\"password\":\"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "459"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1cb-jDfH7A7uBbyy3t4/c8+zsmBawqE\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 21 Oct 2021 00:18:43 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"userData\": {\n            \"_id\": \"6170b179f957f8f8efb0cbed\",\n            \"bookId\": [],\n            \"name\": \"yasmin\",\n            \"email\": \"yasmin@gmail.com\",\n            \"phone\": \"01111111111\",\n            \"userType\": \"user\",\n            \"age\": 24,\n            \"status\": true,\n            \"createdAt\": \"2021-10-21T00:16:57.536Z\",\n            \"updatedAt\": \"2021-10-21T00:18:43.345Z\"\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjE3OWY5NTdmOGY4ZWZiMGNiZWQiLCJpYXQiOjE2MzQ3NzU1MjN9.Re5d-zNno2zl4xfbTkNgBf1yapOAsTHXJPjLnyUMbMc\"\n    },\n    \"message\": \"logged in success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "activate",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"yasmin\",\"password\":\"12345678910\",\"email\":\"yassmen@gmail.com\",\"phone\":\"01111111111\",\"age\":\"24\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/activate/6170b179f957f8f8efb0cbed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"activate",
+						"6170b179f957f8f8efb0cbed"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "activate",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"yasmin\",\"password\":\"12345678910\",\"email\":\"yassmen@gmail.com\",\"phone\":\"01111111111\",\"age\":\"24\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/activate/6170b179f957f8f8efb0cbed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"activate",
+								"6170b179f957f8f8efb0cbed"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "279"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"117-TDz304my3RtxeZHuCN3VSPnlk4k\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 21 Oct 2021 00:17:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"message\": \"registered\",\n    \"data\": {\n        \"_id\": \"6170b179f957f8f8efb0cbed\",\n        \"bookId\": [],\n        \"name\": \"yasmin\",\n        \"email\": \"yasmin@gmail.com\",\n        \"phone\": \"01111111111\",\n        \"userType\": \"user\",\n        \"age\": 24,\n        \"status\": true,\n        \"createdAt\": \"2021-10-21T00:16:57.536Z\",\n        \"updatedAt\": \"2021-10-21T00:17:50.877Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "user profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjE3OWY5NTdmOGY4ZWZiMGNiZWQiLCJpYXQiOjE2MzQ3NzU1MjN9.Re5d-zNno2zl4xfbTkNgBf1yapOAsTHXJPjLnyUMbMc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/user/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"profile"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "user profile",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjE3OWY5NTdmOGY4ZWZiMGNiZWQiLCJpYXQiOjE2MzQ3NzU1MjN9.Re5d-zNno2zl4xfbTkNgBf1yapOAsTHXJPjLnyUMbMc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/user/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"profile"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "285"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"11d-horcxk69vIOJcxynQmNuOJDzQjI\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 21 Oct 2021 00:20:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"_id\": \"6170b179f957f8f8efb0cbed\",\n        \"bookId\": [],\n        \"name\": \"yasmin\",\n        \"email\": \"yasmin@gmail.com\",\n        \"phone\": \"01111111111\",\n        \"userType\": \"user\",\n        \"age\": 24,\n        \"status\": true,\n        \"createdAt\": \"2021-10-21T00:16:57.536Z\",\n        \"updatedAt\": \"2021-10-21T00:18:43.345Z\"\n    },\n    \"message\": \"user data loaded\"\n}"
+				}
+			]
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjE3OWY5NTdmOGY4ZWZiMGNiZWQiLCJpYXQiOjE2MzQ3NzU2NTd9.rtOId8JIir4_zL8SAyf_0S-FY4YIciUot6e2zwHWJGw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/user/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"logout"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "logout",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjE3OWY5NTdmOGY4ZWZiMGNiZWQiLCJpYXQiOjE2MzQ3NzU2NTd9.rtOId8JIir4_zL8SAyf_0S-FY4YIciUot6e2zwHWJGw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/user/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"logout"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "230"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"e6-qJ/05Z1J+GrAJeIc4+Vplp9NzkQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 21 Oct 2021 00:22:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"6170b179f957f8f8efb0cbed\",\n    \"bookId\": [],\n    \"name\": \"yasmin\",\n    \"email\": \"yasmin@gmail.com\",\n    \"phone\": \"01111111111\",\n    \"userType\": \"user\",\n    \"age\": 24,\n    \"status\": true,\n    \"createdAt\": \"2021-10-21T00:16:57.536Z\",\n    \"updatedAt\": \"2021-10-21T00:20:57.589Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "edit profile",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjE3OWY5NTdmOGY4ZWZiMGNiZWQiLCJpYXQiOjE2MzQ3NzU1MjN9.Re5d-zNno2zl4xfbTkNgBf1yapOAsTHXJPjLnyUMbMc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"yasmin--mohamed\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/editProfile1/6170b179f957f8f8efb0cbed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"editProfile1",
+						"6170b179f957f8f8efb0cbed"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "edit profile",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjE3OWY5NTdmOGY4ZWZiMGNiZWQiLCJpYXQiOjE2MzQ3NzU1MjN9.Re5d-zNno2zl4xfbTkNgBf1yapOAsTHXJPjLnyUMbMc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"yasmin--mohamed\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/editProfile1/6170b179f957f8f8efb0cbed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"editProfile1",
+								"6170b179f957f8f8efb0cbed"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "288"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"120-SG9pyacxs/H5/87dumbFwTOvNas\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 21 Oct 2021 00:23:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"message\": \"registered\",\n    \"data\": {\n        \"_id\": \"6170b179f957f8f8efb0cbed\",\n        \"bookId\": [],\n        \"name\": \"yasmin--mohamed\",\n        \"email\": \"yasmin@gmail.com\",\n        \"phone\": \"01111111111\",\n        \"userType\": \"user\",\n        \"age\": 24,\n        \"status\": true,\n        \"createdAt\": \"2021-10-21T00:16:57.536Z\",\n        \"updatedAt\": \"2021-10-21T00:23:25.307Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "add book to user books",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjE3OWY5NTdmOGY4ZWZiMGNiZWQiLCJpYXQiOjE2MzQ3NzU1MjN9.Re5d-zNno2zl4xfbTkNgBf1yapOAsTHXJPjLnyUMbMc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/user/addbookToUser/61733e2353cadaf95be9d597",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"addbookToUser",
+						"61733e2353cadaf95be9d597"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "add book to user books",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjE3OWY5NTdmOGY4ZWZiMGNiZWQiLCJpYXQiOjE2MzQ3NzU1MjN9.Re5d-zNno2zl4xfbTkNgBf1yapOAsTHXJPjLnyUMbMc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/user/addbookToUser/61733e2353cadaf95be9d597",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"addbookToUser",
+								"61733e2353cadaf95be9d597"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "75"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4b-19dGml5+Y/yhbSsYfwHc3Tam24E\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 23 Oct 2021 00:13:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": false,\n    \"data\": \"already added\",\n    \"message\": \"error in adding book\"\n}"
+				},
+				{
+					"name": "add book to user books",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjE3OWY5NTdmOGY4ZWZiMGNiZWQiLCJpYXQiOjE2MzQ3NzU1MjN9.Re5d-zNno2zl4xfbTkNgBf1yapOAsTHXJPjLnyUMbMc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/user/addbookToUser/61733e6453cadaf95be9d59b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"addbookToUser",
+								"61733e6453cadaf95be9d59b"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "344"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"158-wXxtM3sZPWSGMgkFBbdfzyU+iwY\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 23 Oct 2021 00:15:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"message\": \"book added\",\n    \"data\": {\n        \"_id\": \"61733e6453cadaf95be9d59b\",\n        \"userId\": [\n            \"6170b179f957f8f8efb0cbed\"\n        ],\n        \"bookName\": \"obaaal\",\n        \"category\": \"fiction\",\n        \"price\": 110,\n        \"autherId\": \"617339a010b88260af3e1c87\",\n        \"createdAt\": \"2021-10-22T22:42:44.298Z\",\n        \"updatedAt\": \"2021-10-23T00:15:14.728Z\",\n        \"__v\": 1,\n        \"bookDist\": \"uploads\\\\pdfs\\\\1634942814925.pdf\"\n    }\n}"
+				},
+				{
+					"name": "testt",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjE3OWY5NTdmOGY4ZWZiMGNiZWQiLCJpYXQiOjE2MzQ3NzU1MjN9.Re5d-zNno2zl4xfbTkNgBf1yapOAsTHXJPjLnyUMbMc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/user/addbookToUser/617354771fbad46473b3d0a9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"addbookToUser",
+								"617354771fbad46473b3d0a9"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "350"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"15e-2tkiXOp19isvjjk0SmrrShHURv4\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 23 Oct 2021 00:19:17 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"message\": \"book added\",\n    \"data\": {\n        \"_id\": \"617354771fbad46473b3d0a9\",\n        \"userId\": [\n            \"6170b179f957f8f8efb0cbed\"\n        ],\n        \"bookName\": \"bbbbbbbbbbbb\",\n        \"category\": \"fiction\",\n        \"price\": 110,\n        \"autherId\": \"6173397610b88260af3e1c83\",\n        \"createdAt\": \"2021-10-23T00:16:55.185Z\",\n        \"updatedAt\": \"2021-10-23T00:19:17.523Z\",\n        \"__v\": 1,\n        \"bookDist\": \"uploads\\\\pdfs\\\\1634948250356.pdf\"\n    }\n}"
+				},
+				{
+					"name": "testt2",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/user/addbookToUser/617354771fbad46473b3d0a9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"addbookToUser",
+								"617354771fbad46473b3d0a9"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "377"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"179-074kyFfcl2c2RW0nbHKWjYKws4c\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 23 Oct 2021 00:29:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"message\": \"book added\",\n    \"data\": {\n        \"_id\": \"617354771fbad46473b3d0a9\",\n        \"userId\": [\n            \"6170b179f957f8f8efb0cbed\",\n            \"6170b3ee5f281df53948c5c9\"\n        ],\n        \"bookName\": \"bbbbbbbbbbbb\",\n        \"category\": \"fiction\",\n        \"price\": 110,\n        \"autherId\": \"6173397610b88260af3e1c83\",\n        \"createdAt\": \"2021-10-23T00:16:55.185Z\",\n        \"updatedAt\": \"2021-10-23T00:29:52.082Z\",\n        \"__v\": 2,\n        \"bookDist\": \"uploads\\\\pdfs\\\\1634948250356.pdf\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "show My Books (logged in user books)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjE3OWY5NTdmOGY4ZWZiMGNiZWQiLCJpYXQiOjE2MzQ3NzU1MjN9.Re5d-zNno2zl4xfbTkNgBf1yapOAsTHXJPjLnyUMbMc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/user/showMyBooks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"showMyBooks"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "show My Books (logged in user books)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjE3OWY5NTdmOGY4ZWZiMGNiZWQiLCJpYXQiOjE2MzQ3NzU1MjN9.Re5d-zNno2zl4xfbTkNgBf1yapOAsTHXJPjLnyUMbMc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/user/showMyBooks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"showMyBooks"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "975"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3cf-78iaHFaJDzvqYMRPsTHTnxYtGCE\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 23 Oct 2021 00:22:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"mybooksData\": [\n            {\n                \"_id\": \"61733e2353cadaf95be9d597\",\n                \"userId\": [\n                    \"6170b179f957f8f8efb0cbed\"\n                ],\n                \"bookName\": \"blue elephant\",\n                \"category\": \"fiction\",\n                \"price\": 110,\n                \"autherId\": \"6173397610b88260af3e1c83\",\n                \"createdAt\": \"2021-10-22T22:41:39.092Z\",\n                \"updatedAt\": \"2021-10-23T00:13:15.803Z\",\n                \"__v\": 1,\n                \"bookDist\": \"uploads\\\\pdfs\\\\1634942944641.pdf\"\n            },\n            {\n                \"_id\": \"61733e6453cadaf95be9d59b\",\n                \"userId\": [\n                    \"6170b179f957f8f8efb0cbed\"\n                ],\n                \"bookName\": \"obaaal\",\n                \"category\": \"fiction\",\n                \"price\": 110,\n                \"autherId\": \"617339a010b88260af3e1c87\",\n                \"createdAt\": \"2021-10-22T22:42:44.298Z\",\n                \"updatedAt\": \"2021-10-23T00:15:14.728Z\",\n                \"__v\": 1,\n                \"bookDist\": \"uploads\\\\pdfs\\\\1634942814925.pdf\"\n            },\n            {\n                \"_id\": \"617354771fbad46473b3d0a9\",\n                \"userId\": [\n                    \"6170b179f957f8f8efb0cbed\"\n                ],\n                \"bookName\": \"bbbbbbbbbbbb\",\n                \"category\": \"fiction\",\n                \"price\": 110,\n                \"autherId\": \"6173397610b88260af3e1c83\",\n                \"createdAt\": \"2021-10-23T00:16:55.185Z\",\n                \"updatedAt\": \"2021-10-23T00:19:17.523Z\",\n                \"__v\": 1,\n                \"bookDist\": \"uploads\\\\pdfs\\\\1634948250356.pdf\"\n            }\n        ]\n    },\n    \"message\": \"show my books data\"\n}"
+				},
+				{
+					"name": "show My Books (logged in user books) after delete one of the books from the system",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjE3OWY5NTdmOGY4ZWZiMGNiZWQiLCJpYXQiOjE2MzQ3NzU1MjN9.Re5d-zNno2zl4xfbTkNgBf1yapOAsTHXJPjLnyUMbMc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/user/showMyBooks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"showMyBooks"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "673"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2a1-2f9SElf0f9r9pBTIQlwSsGLqDuo\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 23 Oct 2021 00:38:40 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"mybooksData\": [\n            {\n                \"_id\": \"61733e2353cadaf95be9d597\",\n                \"userId\": [\n                    \"6170b179f957f8f8efb0cbed\"\n                ],\n                \"bookName\": \"blue elephant\",\n                \"category\": \"fiction\",\n                \"price\": 110,\n                \"autherId\": \"6173397610b88260af3e1c83\",\n                \"createdAt\": \"2021-10-22T22:41:39.092Z\",\n                \"updatedAt\": \"2021-10-23T00:13:15.803Z\",\n                \"__v\": 1,\n                \"bookDist\": \"uploads\\\\pdfs\\\\1634942944641.pdf\"\n            },\n            {\n                \"_id\": \"61733e6453cadaf95be9d59b\",\n                \"userId\": [\n                    \"6170b179f957f8f8efb0cbed\"\n                ],\n                \"bookName\": \"obaaal\",\n                \"category\": \"fiction\",\n                \"price\": 110,\n                \"autherId\": \"617339a010b88260af3e1c87\",\n                \"createdAt\": \"2021-10-22T22:42:44.298Z\",\n                \"updatedAt\": \"2021-10-23T00:15:14.728Z\",\n                \"__v\": 1,\n                \"bookDist\": \"uploads\\\\pdfs\\\\1634942814925.pdf\"\n            }\n        ]\n    },\n    \"message\": \"show my books data\"\n}"
+				}
+			]
+		},
+		{
+			"name": "register as admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"admiin\",\r\n    \"password\":\"123456789\",\r\n    \"email\":\"admin@admin.com\",\r\n    \"phone\":\"01111111111\",\r\n    \"userType\":\"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "register as admin",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"admiin\",\r\n    \"password\":\"123456789\",\r\n    \"email\":\"admin@admin.com\",\r\n    \"phone\":\"01111111111\",\r\n    \"userType\":\"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "271"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10f-ZKA8PCQ5Hy1+P6UM3L/CCdWSfLs\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 21 Oct 2021 00:27:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"message\": \"registered\",\n    \"data\": {\n        \"bookId\": [],\n        \"name\": \"admiin\",\n        \"email\": \"admin@admin.com\",\n        \"phone\": \"01111111111\",\n        \"userType\": \"admin\",\n        \"status\": false,\n        \"_id\": \"6170b3ee5f281df53948c5c9\",\n        \"createdAt\": \"2021-10-21T00:27:26.549Z\",\n        \"updatedAt\": \"2021-10-21T00:27:26.549Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "activate  admin account",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"yasmin\",\"password\":\"12345678910\",\"email\":\"yassmen@gmail.com\",\"phone\":\"01111111111\",\"age\":\"24\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/activate/6170b3ee5f281df53948c5c9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"activate",
+						"6170b3ee5f281df53948c5c9"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "activate as admin",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"yasmin\",\"password\":\"12345678910\",\"email\":\"yassmen@gmail.com\",\"phone\":\"01111111111\",\"age\":\"24\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/activate/6170b3ee5f281df53948c5c9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"activate",
+								"6170b3ee5f281df53948c5c9"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "270"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10e-qNiGP+goMDqJepbGX/2Jn62spSE\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 21 Oct 2021 00:29:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"message\": \"registered\",\n    \"data\": {\n        \"_id\": \"6170b3ee5f281df53948c5c9\",\n        \"bookId\": [],\n        \"name\": \"admiin\",\n        \"email\": \"admin@admin.com\",\n        \"phone\": \"01111111111\",\n        \"userType\": \"admin\",\n        \"status\": true,\n        \"createdAt\": \"2021-10-21T00:27:26.549Z\",\n        \"updatedAt\": \"2021-10-21T00:29:24.998Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "login as admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"email\":\"admin@admin.com\"\r\n,\"password\":\"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login as admin",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"email\":\"admin@admin.com\"\r\n,\"password\":\"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "451"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1c3-cewumAEEKUTLIw650xOsPXdcPNk\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 21 Oct 2021 00:28:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"userData\": {\n            \"_id\": \"6170b3ee5f281df53948c5c9\",\n            \"bookId\": [],\n            \"name\": \"admiin\",\n            \"email\": \"admin@admin.com\",\n            \"phone\": \"01111111111\",\n            \"userType\": \"admin\",\n            \"status\": false,\n            \"createdAt\": \"2021-10-21T00:27:26.549Z\",\n            \"updatedAt\": \"2021-10-21T00:28:03.262Z\"\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE\"\n    },\n    \"message\": \"logged in success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "admin add user ",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"wafaa kamal\",\"password\":\"123456789\",\"email\":\"wafaa@gmail.com\",\"phone\":\"01111111111\",\"age\":\"24\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/admin/addUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"addUser"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "admin add user ",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"wafaa kamal\",\"password\":\"123456789\",\"email\":\"wafaa@gmail.com\",\"phone\":\"01111111111\",\"age\":\"24\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/admin/addUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"addUser"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "284"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"11c-f22JH05kbRqqLMitwt8Go45fQdY\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Oct 2021 20:58:08 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"message\": \"registered\",\n    \"data\": {\n        \"bookId\": [],\n        \"name\": \"wafaa kamal\",\n        \"email\": \"wafaa@gmail.com\",\n        \"phone\": \"01111111111\",\n        \"userType\": \"user\",\n        \"age\": 24,\n        \"status\": false,\n        \"_id\": \"617325e0aa034bb2069fe116\",\n        \"createdAt\": \"2021-10-22T20:58:08.522Z\",\n        \"updatedAt\": \"2021-10-22T20:58:08.522Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "edit Profile as admin ",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/admin/editProfile/617325e0aa034bb2069fe116",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"editProfile",
+						"617325e0aa034bb2069fe116"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "edit Profile as admin ",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/admin/editProfile/617325e0aa034bb2069fe116",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"editProfile",
+								"617325e0aa034bb2069fe116"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "274"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"112-zIR46GM2FPavZbZuNlwQnn1420E\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Oct 2021 21:05:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"message\": \"profile edited\",\n    \"data\": {\n        \"_id\": \"6170b3ee5f281df53948c5c9\",\n        \"bookId\": [],\n        \"name\": \"admiin\",\n        \"email\": \"admin@admin.com\",\n        \"phone\": \"01111111111\",\n        \"userType\": \"admin\",\n        \"status\": true,\n        \"createdAt\": \"2021-10-21T00:27:26.549Z\",\n        \"updatedAt\": \"2021-10-21T00:29:24.998Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "show All Users as admin",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/admin/showAllUsers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"showAllUsers"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "show All Users as admin",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/admin/showAllUsers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"showAllUsers"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "535"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"217-nto8lSpzx+ynxdrnEbkK1j2LgGc\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 21 Oct 2021 00:30:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"usersData\": [\n            {\n                \"_id\": \"6170b179f957f8f8efb0cbed\",\n                \"bookId\": [],\n                \"name\": \"yasmin--mohamed\",\n                \"email\": \"yasmin@gmail.com\",\n                \"phone\": \"01111111111\",\n                \"userType\": \"user\",\n                \"age\": 24,\n                \"status\": true,\n                \"createdAt\": \"2021-10-21T00:16:57.536Z\",\n                \"updatedAt\": \"2021-10-21T00:23:25.307Z\"\n            },\n            {\n                \"_id\": \"6170b3ee5f281df53948c5c9\",\n                \"bookId\": [],\n                \"name\": \"admiin\",\n                \"email\": \"admin@admin.com\",\n                \"phone\": \"01111111111\",\n                \"userType\": \"admin\",\n                \"status\": true,\n                \"createdAt\": \"2021-10-21T00:27:26.549Z\",\n                \"updatedAt\": \"2021-10-21T00:29:24.998Z\"\n            }\n        ]\n    },\n    \"message\": \"show all successful\"\n}"
+				}
+			]
+		},
+		{
+			"name": "show Single User as admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/admin/showSingleUser/6170b179f957f8f8efb0cbed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"showSingleUser",
+						"6170b179f957f8f8efb0cbed"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "show Single User as admin",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/admin/showSingleUser/6170b179f957f8f8efb0cbed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"showSingleUser",
+								"6170b179f957f8f8efb0cbed"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "305"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"131-9hYtWaOIbfFvT4r7Rd+tBgZkFnE\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Oct 2021 20:50:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"userData\": {\n            \"_id\": \"6170b179f957f8f8efb0cbed\",\n            \"bookId\": [],\n            \"name\": \"yasmin--mohamed\",\n            \"email\": \"yasmin@gmail.com\",\n            \"phone\": \"01111111111\",\n            \"userType\": \"user\",\n            \"age\": 24,\n            \"status\": true,\n            \"createdAt\": \"2021-10-21T00:16:57.536Z\",\n            \"updatedAt\": \"2021-10-21T00:23:25.307Z\"\n        }\n    },\n    \"message\": \"show user data\"\n}"
+				}
+			]
+		},
+		{
+			"name": "add auther as admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"agatha chreisty\",\r\n    \"email\":\"agathachreisty@gmail.com\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/admin/addAuthre",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"addAuthre"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "add auther",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"agatha chreisty\",\r\n    \"email\":\"agathachreisty@gmail.com\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/admin/addAuthre",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"addAuthre"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "229"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"e5-MTPTmoYEqefbj9qtlDmEsUUAYQs\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Oct 2021 22:15:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"message\": \"registered\",\n    \"data\": {\n        \"name\": \"agatha chreisty\",\n        \"email\": \"agathachreisty@gmail.com\",\n        \"_id\": \"6173381910b88260af3e1c79\",\n        \"createdAt\": \"2021-10-22T22:15:54.015Z\",\n        \"updatedAt\": \"2021-10-22T22:15:54.015Z\",\n        \"__v\": 0\n    }\n}"
+				},
+				{
+					"name": "add auther as admin",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"ahmed morad\",\r\n    \"email\":\"ahmedmorad@gmail.com\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/admin/addAuthre",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"addAuthre"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "221"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"dd-I8NuYfIZ8h5G2isUbFTt6UJh2hc\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Oct 2021 22:21:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"message\": \"registered\",\n    \"data\": {\n        \"name\": \"ahmed morad\",\n        \"email\": \"ahmedmorad@gmail.com\",\n        \"_id\": \"6173397610b88260af3e1c83\",\n        \"createdAt\": \"2021-10-22T22:21:42.682Z\",\n        \"updatedAt\": \"2021-10-22T22:21:42.682Z\",\n        \"__v\": 0\n    }\n}"
+				},
+				{
+					"name": "add auther as admin",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"hanan lashen\",\r\n    \"email\":\"hananlashen@gmail.com\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/admin/addAuthre",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"addAuthre"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "223"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"df-rvfJUrDqbcitEST6autEga756dY\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Oct 2021 22:22:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"message\": \"registered\",\n    \"data\": {\n        \"name\": \"hanan lashen\",\n        \"email\": \"hananlashen@gmail.com\",\n        \"_id\": \"617339a010b88260af3e1c87\",\n        \"createdAt\": \"2021-10-22T22:22:24.883Z\",\n        \"updatedAt\": \"2021-10-22T22:22:24.883Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "edit auther as admin",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Agatha Chreisty\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/admin/editAuthre/6173381910b88260af3e1c79",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"editAuthre",
+						"6173381910b88260af3e1c79"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "edit auther",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTZkMzVhZGQwNzIwMGM5NDYyZTU0ZTIiLCJpYXQiOjE2MzQ1NDcyMTd9.YvUScbrVyAlNaWa7Z8mvEK-TxiAugwPa_G2xJnP-ZOs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Ahmed Moraad\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auther/edit/61704851940f80ddaec29aa6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auther",
+								"edit",
+								"61704851940f80ddaec29aa6"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "241"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f1-fcKjwr7DdtSGkOePBF9t9g5Qm+g\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Oct 2021 18:06:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"autherData\": {\n            \"_id\": \"61704851940f80ddaec29aa6\",\n            \"name\": \"Ahmed Moraad\",\n            \"email\": \"ahmedmorad@gmail.com\",\n            \"createdAt\": \"2021-10-20T16:48:17.623Z\",\n            \"updatedAt\": \"2021-10-20T17:03:59.051Z\",\n            \"__v\": 0\n        }\n    },\n    \"message\": \"auther updated\"\n}"
+				},
+				{
+					"name": "edit auther as admin",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Agatha Chreisty\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/admin/editAuthre/6173381910b88260af3e1c79",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"editAuthre",
+								"6173381910b88260af3e1c79"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "248"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f8-oZNgx0KWFkIkzv4RuqFuJoBVCzg\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Oct 2021 22:19:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"autherData\": {\n            \"_id\": \"6173381910b88260af3e1c79\",\n            \"name\": \"Agatha Chreisty\",\n            \"email\": \"agathachreisty@gmail.com\",\n            \"createdAt\": \"2021-10-22T22:15:54.015Z\",\n            \"updatedAt\": \"2021-10-22T22:19:02.760Z\",\n            \"__v\": 0\n        }\n    },\n    \"message\": \"auther updated\"\n}"
+				}
+			]
+		},
+		{
+			"name": "delete auther as admin",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/admin/deleteAuthre/61733c7353cadaf95be9d58b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"deleteAuthre",
+						"61733c7353cadaf95be9d58b"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete auther as admin",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/admin/deleteAuthre/61733c7353cadaf95be9d58b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"deleteAuthre",
+								"61733c7353cadaf95be9d58b"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "231"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"e7-9luwPgvmfcmVgaOcOG4BkOY8wEc\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Oct 2021 22:34:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"autherData\": {\n            \"_id\": \"61733c7353cadaf95be9d58b\",\n            \"name\": \"cccccccc\",\n            \"email\": \"cccc@gmail.com\",\n            \"createdAt\": \"2021-10-22T22:34:27.089Z\",\n            \"updatedAt\": \"2021-10-22T22:34:27.089Z\",\n            \"__v\": 0\n        }\n    },\n    \"message\": \"auther deleted\"\n}"
+				},
+				{
+					"name": "delete User as admin ",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/admin/deleteUser/617327de6d75adaecc9c2760",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"deleteUser",
+								"617327de6d75adaecc9c2760"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "308"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"134-HtLM7XV/m9UfwaFzrHh6CrGlktY\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Oct 2021 21:13:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"userData\": {\n            \"_id\": \"617327de6d75adaecc9c2760\",\n            \"bookId\": [],\n            \"name\": \"wafaa kamal yyy\",\n            \"email\": \"wafaakamal@gmail.com\",\n            \"phone\": \"01111111111\",\n            \"userType\": \"user\",\n            \"age\": 24,\n            \"status\": false,\n            \"createdAt\": \"2021-10-22T21:06:38.917Z\",\n            \"updatedAt\": \"2021-10-22T21:06:38.917Z\"\n        }\n    },\n    \"message\": \"user deleted\"\n}"
+				}
+			]
+		},
+		{
+			"name": "show All Authers as admin",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/admin/showAllAuthers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"showAllAuthers"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "show All Authers as admin",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/admin/showAllAuthers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"showAllAuthers"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "604"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"25c-jzphjB1u0K4zGDphwgK56E5yH8M\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Oct 2021 22:27:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"authersData\": [\n            {\n                \"_id\": \"6173381910b88260af3e1c79\",\n                \"name\": \"Agatha Chreisty\",\n                \"email\": \"agathachreisty@gmail.com\",\n                \"createdAt\": \"2021-10-22T22:15:54.015Z\",\n                \"updatedAt\": \"2021-10-22T22:19:02.760Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"6173397610b88260af3e1c83\",\n                \"name\": \"ahmed morad\",\n                \"email\": \"ahmedmorad@gmail.com\",\n                \"createdAt\": \"2021-10-22T22:21:42.682Z\",\n                \"updatedAt\": \"2021-10-22T22:21:42.682Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"617339a010b88260af3e1c87\",\n                \"name\": \"hanan lashen\",\n                \"email\": \"hananlashen@gmail.com\",\n                \"createdAt\": \"2021-10-22T22:22:24.883Z\",\n                \"updatedAt\": \"2021-10-22T22:22:24.883Z\",\n                \"__v\": 0\n            }\n        ]\n    },\n    \"message\": \"show all successful\"\n}"
+				}
+			]
+		},
+		{
+			"name": "show single auther as admin",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/admin/showSingleAuthre/6173381910b88260af3e1c79",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"showSingleAuthre",
+						"6173381910b88260af3e1c79"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "show single auther as admin",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/admin/showSingleAuthre/6173381910b88260af3e1c79",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"showSingleAuthre",
+								"6173381910b88260af3e1c79"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "250"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"fa-VWwtolNSOQLWHOyCF4ZcY6U/FIk\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Oct 2021 22:30:43 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"autherData\": {\n            \"_id\": \"6173381910b88260af3e1c79\",\n            \"name\": \"Agatha Chreisty\",\n            \"email\": \"agathachreisty@gmail.com\",\n            \"createdAt\": \"2021-10-22T22:15:54.015Z\",\n            \"updatedAt\": \"2021-10-22T22:19:02.760Z\",\n            \"__v\": 0\n        }\n    },\n    \"message\": \"show auther data\"\n}"
+				}
+			]
+		},
+		{
+			"name": "add book data to the system as admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookName\":\"blue elephant\",\r\n    \"category\":\"fiction\",\r\n    \"price\":\"110\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/admin/addBook/6173397610b88260af3e1c83",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"addBook",
+						"6173397610b88260af3e1c83"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "add book data to the system",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwNGZkMWJlNzUyMDZkMTgwNDc1ZDYiLCJpYXQiOjE2MzQ3NTIzODl9.tYv5gL2ZwzK4k29zeMNLT-bW1U6hkvwYXV_9yjk91_I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookName\":\"obaaal\",\r\n    \"category\":\"fiction\",\r\n    \"price\":\"110\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/book/add/617048d1f3e4ab8e660254d6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"book",
+								"add",
+								"617048d1f3e4ab8e660254d6"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "272"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"110-ePAMtHzOZJEYHFEN5UNr9a9BOGI\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Oct 2021 19:26:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"message\": \"book added\",\n    \"data\": {\n        \"userId\": [],\n        \"bookName\": \"obaaal\",\n        \"category\": \"fiction\",\n        \"price\": 110,\n        \"_id\": \"61706d8259ba9d005f047f35\",\n        \"autherId\": \"617048d1f3e4ab8e660254d6\",\n        \"createdAt\": \"2021-10-20T19:26:58.662Z\",\n        \"updatedAt\": \"2021-10-20T19:26:58.662Z\",\n        \"__v\": 0\n    }\n}"
+				},
+				{
+					"name": "add book data to the system as admin",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookName\":\"blue elephant\",\r\n    \"category\":\"fiction\",\r\n    \"price\":\"110\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/admin/addBook/6173397610b88260af3e1c83",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"addBook",
+								"6173397610b88260af3e1c83"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "279"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"117-tZtFykpXjHy1OkBaKXCy88EKVzg\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Oct 2021 22:41:39 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"message\": \"book added\",\n    \"data\": {\n        \"userId\": [],\n        \"bookName\": \"blue elephant\",\n        \"category\": \"fiction\",\n        \"price\": 110,\n        \"_id\": \"61733e2353cadaf95be9d597\",\n        \"autherId\": \"6173397610b88260af3e1c83\",\n        \"createdAt\": \"2021-10-22T22:41:39.092Z\",\n        \"updatedAt\": \"2021-10-22T22:41:39.092Z\",\n        \"__v\": 0\n    }\n}"
+				},
+				{
+					"name": "add book data to the system as admin",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookName\":\"obaaal\",\r\n    \"category\":\"fiction\",\r\n    \"price\":\"110\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/admin/addBook/617339a010b88260af3e1c87",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"addBook",
+								"617339a010b88260af3e1c87"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "272"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"110-QWyxSn0pT8ZxjC8UXkdsaQJELus\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Oct 2021 22:42:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"message\": \"book added\",\n    \"data\": {\n        \"userId\": [],\n        \"bookName\": \"obaaal\",\n        \"category\": \"fiction\",\n        \"price\": 110,\n        \"_id\": \"61733e6453cadaf95be9d59b\",\n        \"autherId\": \"617339a010b88260af3e1c87\",\n        \"createdAt\": \"2021-10-22T22:42:44.298Z\",\n        \"updatedAt\": \"2021-10-22T22:42:44.298Z\",\n        \"__v\": 0\n    }\n}"
+				},
+				{
+					"name": "add book data to the system as admin",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookName\":\"testtest\",\r\n    \"category\":\"fiction\",\r\n    \"price\":\"110\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/admin/addBook/617339a010b88260af3e1c87",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"addBook",
+								"617339a010b88260af3e1c87"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "274"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"112-2KaaEefdcgYOTRm+Ercl/Ld4eV0\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Oct 2021 22:43:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"message\": \"book added\",\n    \"data\": {\n        \"userId\": [],\n        \"bookName\": \"testtest\",\n        \"category\": \"fiction\",\n        \"price\": 110,\n        \"_id\": \"61733e9453cadaf95be9d5a2\",\n        \"autherId\": \"617339a010b88260af3e1c87\",\n        \"createdAt\": \"2021-10-22T22:43:32.133Z\",\n        \"updatedAt\": \"2021-10-22T22:43:32.133Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "add book pdf as admin",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "pdf",
+							"type": "file",
+							"src": "/C:/Users/yasmin mohamed/Desktop/obalHananLasheen.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/admin/addPdf/61733e6453cadaf95be9d59b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"addPdf",
+						"61733e6453cadaf95be9d59b"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "add book pdf",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwNGZkMWJlNzUyMDZkMTgwNDc1ZDYiLCJpYXQiOjE2MzQ3NTIzODl9.tYv5gL2ZwzK4k29zeMNLT-bW1U6hkvwYXV_9yjk91_I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "pdf",
+									"type": "file",
+									"src": "/C:/Users/yasmin mohamed/Desktop/79796.Foulabook.com.2018-01-20.1516466313.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/book/addPdf/617058b551a96dc8f97c9122",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"book",
+								"addPdf",
+								"617058b551a96dc8f97c9122"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "366"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"16e-GHHYrUtLt9TduLJMwj8Aolwdl1Y\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Oct 2021 22:16:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"_id\": \"617058b551a96dc8f97c9122\",\n        \"userId\": [\n            \"616d35add07200c9462e54e2\"\n        ],\n        \"bookName\": \"al feel al azraq\",\n        \"category\": \"fiction\",\n        \"price\": 110,\n        \"autherId\": \"61704851940f80ddaec29aa6\",\n        \"createdAt\": \"2021-10-20T17:58:13.805Z\",\n        \"updatedAt\": \"2021-10-20T22:16:38.455Z\",\n        \"__v\": 1,\n        \"bookDist\": \"uploads\\\\pdfs\\\\1634768198300.pdf\"\n    },\n    \"message\": \" pdf added successfuly\"\n}"
+				},
+				{
+					"name": "add book pdf",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwNGZkMWJlNzUyMDZkMTgwNDc1ZDYiLCJpYXQiOjE2MzQ3NTIzODl9.tYv5gL2ZwzK4k29zeMNLT-bW1U6hkvwYXV_9yjk91_I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "pdf",
+									"type": "file",
+									"src": "/C:/Users/yasmin mohamed/Desktop/obalHananLasheen.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/book/addPdf/61706d8259ba9d005f047f35",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"book",
+								"addPdf",
+								"61706d8259ba9d005f047f35"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "330"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"14a-DIzijf79qWTPt+oyHhoGL00VAoo\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Oct 2021 22:18:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"_id\": \"61706d8259ba9d005f047f35\",\n        \"userId\": [],\n        \"bookName\": \"obaaal\",\n        \"category\": \"fiction\",\n        \"price\": 110,\n        \"autherId\": \"617048d1f3e4ab8e660254d6\",\n        \"createdAt\": \"2021-10-20T19:26:58.662Z\",\n        \"updatedAt\": \"2021-10-20T22:18:07.155Z\",\n        \"__v\": 0,\n        \"bookDist\": \"uploads\\\\pdfs\\\\1634768287112.pdf\"\n    },\n    \"message\": \" pdf added successfuly\"\n}"
+				},
+				{
+					"name": "add book pdf",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "pdf",
+									"type": "file",
+									"src": "/C:/Users/yasmin mohamed/Desktop/obalHananLasheen.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/admin/addPdf/61733e6453cadaf95be9d59b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"addPdf",
+								"61733e6453cadaf95be9d59b"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "330"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"14a-INPR2wTNtYRz4zLIHuJtoq0FUO8\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Oct 2021 22:46:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"_id\": \"61733e6453cadaf95be9d59b\",\n        \"userId\": [],\n        \"bookName\": \"obaaal\",\n        \"category\": \"fiction\",\n        \"price\": 110,\n        \"autherId\": \"617339a010b88260af3e1c87\",\n        \"createdAt\": \"2021-10-22T22:42:44.298Z\",\n        \"updatedAt\": \"2021-10-22T22:46:54.996Z\",\n        \"__v\": 0,\n        \"bookDist\": \"uploads\\\\pdfs\\\\1634942814925.pdf\"\n    },\n    \"message\": \" pdf added successfuly\"\n}"
+				},
+				{
+					"name": "add book pdf",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "pdf",
+									"type": "file",
+									"src": "/C:/Users/yasmin mohamed/Desktop/79796.Foulabook.com.2018-01-20.1516466313.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/admin/addPdf/61733e2353cadaf95be9d597",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"addPdf",
+								"61733e2353cadaf95be9d597"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "337"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"151-674Jw/lsGO/7gsUdulpexXDSCsM\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Oct 2021 22:49:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"_id\": \"61733e2353cadaf95be9d597\",\n        \"userId\": [],\n        \"bookName\": \"blue elephant\",\n        \"category\": \"fiction\",\n        \"price\": 110,\n        \"autherId\": \"6173397610b88260af3e1c83\",\n        \"createdAt\": \"2021-10-22T22:41:39.092Z\",\n        \"updatedAt\": \"2021-10-22T22:49:04.845Z\",\n        \"__v\": 0,\n        \"bookDist\": \"uploads\\\\pdfs\\\\1634942944641.pdf\"\n    },\n    \"message\": \" pdf added successfuly\"\n}"
+				},
+				{
+					"name": "add book pdf",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "pdf",
+									"type": "file",
+									"src": "/C:/Users/yasmin mohamed/Desktop/all/مرجع في لغة C++.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/admin/addPdf/61733e9453cadaf95be9d5a2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"addPdf",
+								"61733e9453cadaf95be9d5a2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "332"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"14c-dqZq+cRDtX6A3OE+WUuSh87xzXs\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Oct 2021 22:50:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"_id\": \"61733e9453cadaf95be9d5a2\",\n        \"userId\": [],\n        \"bookName\": \"testtest\",\n        \"category\": \"fiction\",\n        \"price\": 110,\n        \"autherId\": \"617339a010b88260af3e1c87\",\n        \"createdAt\": \"2021-10-22T22:43:32.133Z\",\n        \"updatedAt\": \"2021-10-22T22:50:53.914Z\",\n        \"__v\": 0,\n        \"bookDist\": \"uploads\\\\pdfs\\\\1634943053870.pdf\"\n    },\n    \"message\": \" pdf added successfuly\"\n}"
+				},
+				{
+					"name": "testt",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "pdf",
+									"type": "file",
+									"src": "/C:/Users/yasmin mohamed/Desktop/CV_2021-09-07-112001.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/admin/addPdf/617354771fbad46473b3d0a9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"addPdf",
+								"617354771fbad46473b3d0a9"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "336"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"150-IQT2jQ+dpbqfVNbQ07dMta6WS2A\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 23 Oct 2021 00:17:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"_id\": \"617354771fbad46473b3d0a9\",\n        \"userId\": [],\n        \"bookName\": \"bbbbbbbbbbbb\",\n        \"category\": \"fiction\",\n        \"price\": 110,\n        \"autherId\": \"6173397610b88260af3e1c83\",\n        \"createdAt\": \"2021-10-23T00:16:55.185Z\",\n        \"updatedAt\": \"2021-10-23T00:17:30.372Z\",\n        \"__v\": 0,\n        \"bookDist\": \"uploads\\\\pdfs\\\\1634948250356.pdf\"\n    },\n    \"message\": \" pdf added successfuly\"\n}"
+				}
+			]
+		},
+		{
+			"name": "delete book as admin",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/admin/deleteBook/617354771fbad46473b3d0a9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"deleteBook",
+						"617354771fbad46473b3d0a9"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete book as admin",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/admin/deleteBook/61733e9453cadaf95be9d5a2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"deleteBook",
+								"61733e9453cadaf95be9d5a2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "335"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"14f-9DjLilOLS+boiWkst87JxnOro9Y\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Oct 2021 23:10:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"bookData\": {\n            \"_id\": \"61733e9453cadaf95be9d5a2\",\n            \"userId\": [],\n            \"bookName\": \"testtest\",\n            \"category\": \"fiction\",\n            \"price\": 110,\n            \"autherId\": \"617339a010b88260af3e1c87\",\n            \"createdAt\": \"2021-10-22T22:43:32.133Z\",\n            \"updatedAt\": \"2021-10-22T22:50:53.914Z\",\n            \"__v\": 0,\n            \"bookDist\": \"uploads\\\\pdfs\\\\1634943053870.pdf\"\n        }\n    },\n    \"message\": \"book deleted\"\n}"
+				},
+				{
+					"name": "delete book as admin",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/admin/deleteBook/617354771fbad46473b3d0a9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"deleteBook",
+								"617354771fbad46473b3d0a9"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "392"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"188-RaevglBqLfTl39DiD76euyUm38M\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 23 Oct 2021 00:38:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"bookData\": {\n            \"_id\": \"617354771fbad46473b3d0a9\",\n            \"userId\": [\n                \"6170b179f957f8f8efb0cbed\",\n                \"6170b3ee5f281df53948c5c9\"\n            ],\n            \"bookName\": \"bbbbbbbbbbbb\",\n            \"category\": \"fiction\",\n            \"price\": 110,\n            \"autherId\": \"6173397610b88260af3e1c83\",\n            \"createdAt\": \"2021-10-23T00:16:55.185Z\",\n            \"updatedAt\": \"2021-10-23T00:29:52.082Z\",\n            \"__v\": 2,\n            \"bookDist\": \"uploads\\\\pdfs\\\\1634948250356.pdf\"\n        }\n    },\n    \"message\": \"book deleted\"\n}"
+				}
+			]
+		},
+		{
+			"name": "show all books as admin",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/admin/showAllBooks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"showAllBooks"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "show all books as admin",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/admin/showAllBooks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"showAllBooks"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "74"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4a-imcjyeMx0y8M12/4pi6RHyeoKeI\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Oct 2021 22:37:06 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"booksData\": []\n    },\n    \"message\": \"show all successful\"\n}"
+				}
+			]
+		},
+		{
+			"name": "show one book as admin",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/admin/showSingleBook/61733e2353cadaf95be9d597",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"showSingleBook",
+						"61733e2353cadaf95be9d597"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "show one book as admin",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcwYjNlZTVmMjgxZGY1Mzk0OGM1YzkiLCJpYXQiOjE2MzQ3NzYwODN9.yK6Oiul4aJlR0mQ6hTzrPmF1y4wMBuvjJiQv_iLc9eE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/admin/showSingleBook/61733e2353cadaf95be9d597",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"showSingleBook",
+								"61733e2353cadaf95be9d597"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "342"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"156-4pkqx3Le9gRsWnPr/NXavHMEpcg\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Oct 2021 23:15:27 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"bookData\": {\n            \"_id\": \"61733e2353cadaf95be9d597\",\n            \"userId\": [],\n            \"bookName\": \"blue elephant\",\n            \"category\": \"fiction\",\n            \"price\": 110,\n            \"autherId\": \"6173397610b88260af3e1c83\",\n            \"createdAt\": \"2021-10-22T22:41:39.092Z\",\n            \"updatedAt\": \"2021-10-22T22:49:04.845Z\",\n            \"__v\": 0,\n            \"bookDist\": \"uploads\\\\pdfs\\\\1634942944641.pdf\"\n        }\n    },\n    \"message\": \"show book data\"\n}"
+				}
+			]
+		},
+		{
+			"name": "show All Authers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/auther/showAllAuthers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auther",
+						"showAllAuthers"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "show All Authers",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/auther/showAllAuthers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auther",
+								"showAllAuthers"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "256"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"100-nGl1Cj1b2latcHvtgQU30bz25F8\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Oct 2021 22:20:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"authersData\": [\n            {\n                \"_id\": \"6173381910b88260af3e1c79\",\n                \"name\": \"Agatha Chreisty\",\n                \"email\": \"agathachreisty@gmail.com\",\n                \"createdAt\": \"2021-10-22T22:15:54.015Z\",\n                \"updatedAt\": \"2021-10-22T22:19:02.760Z\",\n                \"__v\": 0\n            }\n        ]\n    },\n    \"message\": \"show all successful\"\n}"
+				}
+			]
+		},
+		{
+			"name": "show single auther",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/auther/showSingle/6173381910b88260af3e1c79",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auther",
+						"showSingle",
+						"6173381910b88260af3e1c79"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "show single auther",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/auther/showSingle/6173381910b88260af3e1c79",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auther",
+								"showSingle",
+								"6173381910b88260af3e1c79"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "250"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"fa-VWwtolNSOQLWHOyCF4ZcY6U/FIk\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Oct 2021 22:28:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"autherData\": {\n            \"_id\": \"6173381910b88260af3e1c79\",\n            \"name\": \"Agatha Chreisty\",\n            \"email\": \"agathachreisty@gmail.com\",\n            \"createdAt\": \"2021-10-22T22:15:54.015Z\",\n            \"updatedAt\": \"2021-10-22T22:19:02.760Z\",\n            \"__v\": 0\n        }\n    },\n    \"message\": \"show auther data\"\n}"
+				}
+			]
+		},
+		{
+			"name": "show all books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/book/showAllBooks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"book",
+						"showAllBooks"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "show all books",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/book/showAllBooks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"book",
+								"showAllBooks"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "620"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"26c-05ONBTrLkyJ37TMwPpxfDidHf+w\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Oct 2021 23:11:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"booksData\": [\n            {\n                \"_id\": \"61733e2353cadaf95be9d597\",\n                \"userId\": [],\n                \"bookName\": \"blue elephant\",\n                \"category\": \"fiction\",\n                \"price\": 110,\n                \"autherId\": \"6173397610b88260af3e1c83\",\n                \"createdAt\": \"2021-10-22T22:41:39.092Z\",\n                \"updatedAt\": \"2021-10-22T22:49:04.845Z\",\n                \"__v\": 0,\n                \"bookDist\": \"uploads\\\\pdfs\\\\1634942944641.pdf\"\n            },\n            {\n                \"_id\": \"61733e6453cadaf95be9d59b\",\n                \"userId\": [],\n                \"bookName\": \"obaaal\",\n                \"category\": \"fiction\",\n                \"price\": 110,\n                \"autherId\": \"617339a010b88260af3e1c87\",\n                \"createdAt\": \"2021-10-22T22:42:44.298Z\",\n                \"updatedAt\": \"2021-10-22T22:46:54.996Z\",\n                \"__v\": 0,\n                \"bookDist\": \"uploads\\\\pdfs\\\\1634942814925.pdf\"\n            }\n        ]\n    },\n    \"message\": \"show all successful\"\n}"
+				}
+			]
+		},
+		{
+			"name": "show one book",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/book/showSingle/61733e2353cadaf95be9d597",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"book",
+						"showSingle",
+						"61733e2353cadaf95be9d597"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "show one book",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/book/showSingle/61733e2353cadaf95be9d597",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"book",
+								"showSingle",
+								"61733e2353cadaf95be9d597"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "342"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"156-4pkqx3Le9gRsWnPr/NXavHMEpcg\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Oct 2021 23:13:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiStatus\": true,\n    \"data\": {\n        \"bookData\": {\n            \"_id\": \"61733e2353cadaf95be9d597\",\n            \"userId\": [],\n            \"bookName\": \"blue elephant\",\n            \"category\": \"fiction\",\n            \"price\": 110,\n            \"autherId\": \"6173397610b88260af3e1c83\",\n            \"createdAt\": \"2021-10-22T22:41:39.092Z\",\n            \"updatedAt\": \"2021-10-22T22:49:04.845Z\",\n            \"__v\": 0,\n            \"bookDist\": \"uploads\\\\pdfs\\\\1634942944641.pdf\"\n        }\n    },\n    \"message\": \"show book data\"\n}"
+				}
+			]
+		}
+	]
+}
