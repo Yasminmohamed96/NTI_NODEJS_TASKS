@@ -1,0 +1,25 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">auther Name</th>
+            <th scope="col">auther Email</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let entry of allAuthers ;let i=index;">
+            <th scope="row">{{i}}</th>
+            <td>{{entry.name}}</td>
+            <td>{{entry.email}}</td>
+            <td>
+                <button class="card-text" (click)="edit(entry._id)"> edit </button><br>
+                <button class="card-text" (click)="deletee(entry._id)"> delete </button><br>
+                <button class="card-text" (click)="viewSingleAuther(entry._id)"> view </button><br>
+                <button class="card-text" (click)="ADDBOOK(entry._id)"> Add Book </button><br>
+
+            </td>
+        </tr>
+
+    </tbody>
+</table>

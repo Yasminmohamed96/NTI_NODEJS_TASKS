@@ -1,0 +1,51 @@
+<section class="container my-3">
+    <form #editUser="ngForm" (ngSubmit)="editmyprofile(editUser)">
+        <div class="row mb-3">
+            <input class="form-control" name='name' #name="ngModel" placeholder="your name"
+                [(ngModel)]="edituserData.name" minlength="3" maxlength="20">
+            <span class="alert alert-danger my-3"
+                *ngIf="name.invalid && (editUser.submitted || name.dirty ||name.touched)">
+                <p *ngIf="name.errors?.minlength"> * name must be more than 3 chars </p>
+                <p *ngIf="name.errors?.maxlength"> * name must be less than 20 chars </p>
+            </span>
+        </div>
+        <div class="row mb-3">
+            <input class="form-control" name='email' placeholder="your email" #mail="ngModel" [(ngModel)]="
+                edituserData.email" email>
+            <span class="alert alert-danger my-3"
+                *ngIf="mail.invalid && (editUser.submitted || mail.dirty ||mail.touched)">
+                <p *ngIf="mail.errors?.email"> * invalid email format </p>
+            </span>
+        </div>
+
+        <div class="row mb-3">
+            <input class="form-control" name='phone' placeholder="your phone" [(ngModel)]="edituserData.phone"
+                #phone="ngModel" pattern="^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$">
+            <span class="alert alert-danger my-3"
+                *ngIf="phone.invalid && (editUser.submitted || phone.dirty ||phone.touched)">
+                <p *ngIf="phone.errors?.pattern"> * invalid phone format </p>
+            </span>
+        </div>
+        <div class=" row mb-3">
+            <input class="form-control" name='age' placeholder="your age" [(ngModel)]="edituserData.age" type="number"
+                min="0" #age="ngModel">
+            <span class="alert alert-danger my-3"
+                *ngIf="age.invalid && (editUser.submitted || age.dirty ||age.touched)">
+                <p *ngIf="age.errors?.min "> * invalid age must be above 0 </p>
+            </span>
+        </div>
+        <div class="row mb-3">
+            <select class="form-control " name="gender" [(ngModel)]="edituserData.gender" #gender="ngModel">
+                <option disabled selected>select gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <span class="alert alert-danger my-3"
+                *ngIf="gender.invalid && (editUser.submitted || gender.dirty ||gender.touched)">
+            </span>
+        </div>
+        <div class="row mb-3">
+            <button class="btn btn-primary">Edit</button>
+        </div>
+    </form>
+</section>

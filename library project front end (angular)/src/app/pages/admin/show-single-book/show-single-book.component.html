@@ -1,0 +1,22 @@
+<div class="card w-75">
+    <div class="card-body">
+        <div class="card-header"> {{book.bookName}}</div>
+        <div class="card-body">
+            <label>price</label>
+            <h5 class="card-title"> {{book.price}}</h5>
+            <label>category</label>
+            <h5 class="card-title"> {{book.category}}</h5>
+            <label>CREATED AT </label>
+            <h5 class="card-title"> {{book.createdAt}}</h5>
+            <label>auther Id</label>
+            <h5 class="card-title"> {{book.autherId}}</h5>
+            <label>IDs of the users who own this book </label>
+            <div *ngFor="let x of book.userId ;let i=index;">
+                <h5 class="card-title"> {{x}}</h5>
+            </div>
+            <button class="card-text" routerLink="/admin/showAllBooks"> Back </button><br>
+
+        </div>
+    </div>
+
+</div>

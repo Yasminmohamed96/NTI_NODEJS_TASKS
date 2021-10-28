@@ -1,0 +1,74 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="isLoaded">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="">Home</a>
+        </li>
+        <ng-container *ngIf="!_global.isAuthed">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="user/register">register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="user/login">login</a>
+          </li>
+        </ng-container>
+        <!-- <ng-template [ngIf]="(_global.isAdmin==false &&_global.isAuthed )"> -->
+        <ng-container *ngIf="(!_global.isAdmin&&_global.isAuthed)">
+          <!-- <h1>{{_global.isAdmin}}</h1> -->
+          <li class="nav-item">
+            <a class="nav-link" routerLink="user/showMyBooks">show my books </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="user/showAllBooks">Show All books </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="user/showallauthers">Show All Authers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="user/profile">{{_global.userData.name}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="user/editProfile1">Edit my profile</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" (click)="logout()">Logout</a>
+          </li>
+        </ng-container>
+        <!-- </ng-template> -->
+        <!-- </ul> -->
+        <!-- </ng-container> -->
+        <ng-container *ngIf="(_global.isAdmin&&_global.isAuthed )">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="admin/showAllUsers">All users</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="admin/showAllBooks">ahow All Books</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="admin/showAllAuthers">show All Authers and Add Books</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="admin/adminprofile">{{_global.userData.name}}</a>
+
+          <li class="nav-item">
+            <a class="nav-link" routerLink="admin/addUser">add User</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="admin/addAuthre">add Auther</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" (click)="logout()">Logout</a>
+          </li>
+        </ng-container>
+      </ul>
+    </div>
+  </div>
+</nav>

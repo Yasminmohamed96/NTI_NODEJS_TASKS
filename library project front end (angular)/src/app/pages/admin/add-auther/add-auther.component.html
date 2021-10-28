@@ -1,0 +1,27 @@
+<section class="container my-3">
+    <form #registerUser="ngForm" (ngSubmit)="add(registerUser)">
+        <div class="row mb-3">
+            <input class="form-control" name='name' #name="ngModel" placeholder="your name" [(ngModel)]="userData.name"
+                required minlength="6" maxlength="20">
+            <span class="alert alert-danger my-3"
+                *ngIf="name.invalid && (registerUser.submitted || name.dirty ||name.touched)">
+                <p *ngIf="name.errors?.required"> * name is required </p>
+                <p *ngIf="name.errors?.minlength"> * name must be more than 6 chars </p>
+                <p *ngIf="name.errors?.maxlength"> * name must be less than 20 chars </p>
+            </span>
+        </div>
+        <div class="row mb-3">
+            <input class="form-control" name='email' placeholder="your email" #mail="ngModel"
+                [(ngModel)]="userData.email" required email>
+            <span class="alert alert-danger my-3"
+                *ngIf="mail.invalid && (registerUser.submitted || mail.dirty ||mail.touched)">
+                <p *ngIf="mail.errors?.required"> * email is required </p>
+                <p *ngIf="mail.errors?.email"> * invalid email format </p>
+            </span>
+            <span class="alert alert-danger my-3" *ngIf="emailError!=''">{{emailError}}</span>
+        </div>
+        <div class="row mb-3">
+            <button class="btn btn-primary">Register</button>
+        </div>
+    </form>
+</section>

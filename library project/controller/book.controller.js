@@ -19,6 +19,23 @@ class BookController {
       });
     }
   };
+  static returnBookDist = async (req, res) => {
+    try {
+      let id = req.params.id;
+      const data = await Book.findById(id);
+      res.status(200).send({
+        apiStatus: true,
+        data: data.bookDist,
+        message: " path returned successfully"
+      });
+    } catch (e) {
+      res.status(500).send({
+        apiStatus: false,
+        data: e.message,
+        message: "error returning the path"
+      });
+    }
+  };
 
   // static adduserToBook = async (req, res) => {
   //   try {
@@ -91,8 +108,10 @@ class BookController {
   static delete = async (req, res) => {
     try {
       const book = await Book.findById(req.params.id);
-      let variableABC = book.bookDist.replace(new RegExp(/\\/g), "/");
-      FS.unlinkSync(variableABC);
+      if (book.bookDist) {
+        let variableABC = book.bookDist.replace(new RegExp(/\\/g), "/");
+        FS.unlinkSync(variableABC);
+      }
       let allUser = await User.find();
       for (const item of allUser) {
         if (item.bookId.includes(req.params.id)) {

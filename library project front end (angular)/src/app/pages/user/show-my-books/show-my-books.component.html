@@ -1,0 +1,20 @@
+<div class="card w-75">
+    <div class="card-body">
+        <div *ngFor="let book of myBooks">
+            <div class="card-header">
+                <h1>{{book.bookName}}</h1>
+            </div>
+            <label>category</label>
+            <h5 class="card-title"> {{book.category}}</h5>
+            <label>price</label>
+            <h5 class="card-title"> {{book.price}}</h5>
+            <label>added At</label>
+            <h5 class="card-title"> {{book.createdAt}}</h5>
+            <!-- <button class="card-text" (click)="downloadBookPdf(book.bookDist)"> view </button><br> -->
+
+        </div>
+    </div>
+</div>
+<div>
+    <!-- <pdf-viewer [src]="pdfFilePath" [render-text]="true" style="display: block;"></pdf-viewer> -->
+</div>

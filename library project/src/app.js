@@ -4,14 +4,20 @@ require("../db/connection");
 
 //call required packages
 const express = require("express");
-// const cors = require("cors")
+const cors = require("cors");
 //create express intance
 const app = express();
-// app.use(cors())
+const path = require("path");
+
+app.use(cors());
 //use json and urlencoded middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.get("/findAsset/:name", (req, res) => {
+  let name = path.join(__dirname, "../public/", req.params.name);
+  res.sendFile(name);
+});
 //routes files
 const userRoutes = require("../routes/user.routes");
 const bookRoutes = require("../routes/book.routes");

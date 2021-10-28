@@ -1,0 +1,33 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">user Name</th>
+            <th scope="col">user Age </th>
+            <th scope="col">user Email</th>
+            <th scope="col">user Phone</th>
+            <th scope="col">user Type</th>
+            <th scope="col">user status</th>
+            <th scope="col">user books count</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let entry of allUsers ;let i=index;">
+            <th scope="row">{{i}}</th>
+            <td>{{entry.name}}</td>
+            <td>{{entry.age}}</td>
+            <td>{{entry.email}}</td>
+            <td>{{entry.phone}}</td>
+            <td>{{entry.userType}}</td>
+            <td>{{entry.status}}</td>
+            <td>{{entry.bookId.length}}</td>
+            <td>
+                <button class="card-text" (click)="editUser(entry._id)"> edit </button><br>
+                <button class="card-text" (click)="deleteUser(entry._id)"> delete </button><br>
+            <td> <button class="card-text" (click)="viewSingleUser(entry._id)"> view </button><br>
+            </td>
+        </tr>
+
+    </tbody>
+</table>

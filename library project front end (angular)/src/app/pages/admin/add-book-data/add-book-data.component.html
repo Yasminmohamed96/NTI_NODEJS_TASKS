@@ -1,0 +1,39 @@
+<section class="container my-3">
+    <form #addbookdata="ngForm" (ngSubmit)="add(addbookdata)">
+        <div class="row mb-3">
+            <input class="form-control" name='bookName' #bookName="ngModel" placeholder="book name"
+                [(ngModel)]="bookdata.bookName" required minlength="6" maxlength="20">
+            <span class="alert alert-danger my-3"
+                *ngIf="bookName.invalid && (addbookdata.submitted || bookName.dirty ||bookName.touched)">
+                <p *ngIf="bookName.errors?.required"> * name is required </p>
+                <p *ngIf="bookName.errors?.minlength"> * name must be more than 6 chars </p>
+                <p *ngIf="bookName.errors?.maxlength"> * name must be less than 20 chars </p>
+            </span>
+        </div>
+        <div class="row mb-3">
+            <input class="form-control" name='category' #category="ngModel" placeholder="book category"
+                [(ngModel)]="bookdata.category" required minlength="6" maxlength="20">
+            <span class="alert alert-danger my-3"
+                *ngIf="category.invalid && (addbookdata.submitted || category.dirty ||category.touched)">
+                <p *ngIf="category.errors?.required"> * category is required </p>
+                <p *ngIf="category.errors?.minlength"> * category must be more than 6 chars </p>
+                <p *ngIf="category.errors?.maxlength"> * category must be less than 20 chars </p>
+            </span>
+        </div>
+
+        <div class="row mb-3">
+            <input class="form-control" name='price' placeholder="book price" [(ngModel)]="bookdata.price" required
+                type="number" min="0" #price="ngModel">
+            <span class="alert alert-danger my-3"
+                *ngIf="price.invalid && (addbookdata.submitted || price.dirty ||price.touched)">
+                <p *ngIf="price.errors?.min || price.errors?.required"> * invalid price must be above 0 </p>
+            </span>
+        </div>
+        <div class="row mb-3">
+            <button class="btn btn-primary">add</button>
+        </div>
+    </form>
+
+
+
+</section>

@@ -1,0 +1,13 @@
+<div class="card w-75">
+    <div class="card-body">
+        <div *ngFor="let auther of authers">
+            <div class="card-header">
+                <h1>{{auther.name}}</h1>
+            </div>
+            <label>email</label>
+            <h5 class="card-title"> {{auther.email}}</h5>
+            <label>added At</label>
+            <h5 class="card-title"> {{auther.createdAt}}</h5>
+        </div>
+    </div>
+</div>
