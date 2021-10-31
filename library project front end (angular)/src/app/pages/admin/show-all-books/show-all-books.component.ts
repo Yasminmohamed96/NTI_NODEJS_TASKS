@@ -28,7 +28,8 @@ export class showallBooksComponent implements OnInit {
     )
   }
 
-  deletee(id: any) {
+  deletee(id: any, index: any) {
+    this.allBooks.splice(index, 1);
     this._global.deleteBooks(id).subscribe(
       (res) => { },
       (err) => {

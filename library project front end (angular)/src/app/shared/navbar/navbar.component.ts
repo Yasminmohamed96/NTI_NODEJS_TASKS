@@ -16,8 +16,12 @@ export class NavbarComponent implements OnInit {
       (data) => {
         this.d = data.data;
         this._global.isAuthed = true;
+        console.log(data.data)
+        localStorage.setItem('type', data.data.userType)
+
         if (data.data.userType === "admin") {
           this.tOf = true;
+          this._global.isAdmin = true
 
         }
         console.log(this._global.isAdmin)
@@ -33,8 +37,10 @@ export class NavbarComponent implements OnInit {
       (e) => { },
       () => {
         localStorage.removeItem('testToken')
+        localStorage.removeItem('type')
         this._global.isAuthed = false
         this._global.userData = null
+        this._global.isAdmin = false
         this._router.navigateByUrl('/')
       }
     )

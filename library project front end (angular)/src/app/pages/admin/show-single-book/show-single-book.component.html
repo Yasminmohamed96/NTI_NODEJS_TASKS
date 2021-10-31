@@ -14,9 +14,16 @@
             <div *ngFor="let x of book.userId ;let i=index;">
                 <h5 class="card-title"> {{x}}</h5>
             </div>
+            <button class="card-text" (click)="downloadBookPdf(book.bookDist)"> view </button><br>
+
             <button class="card-text" routerLink="/admin/showAllBooks"> Back </button><br>
 
         </div>
+        <div>
+            <!-- <a [href]="pdfFilePath"></a> -->
+            <pdf-viewer [src]="pdfFilePath" [render-text]="true" style="display: block;"></pdf-viewer>
+        </div>
     </div>
+
 
 </div>

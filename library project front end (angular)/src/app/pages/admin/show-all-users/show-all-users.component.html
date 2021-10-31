@@ -24,7 +24,7 @@
             <td>{{entry.bookId.length}}</td>
             <td>
                 <button class="card-text" (click)="editUser(entry._id)"> edit </button><br>
-                <button class="card-text" (click)="deleteUser(entry._id)"> delete </button><br>
+                <button class="card-text" (click)="deleteUser(entry._id,i)"> delete </button><br>
             <td> <button class="card-text" (click)="viewSingleUser(entry._id)"> view </button><br>
             </td>
         </tr>

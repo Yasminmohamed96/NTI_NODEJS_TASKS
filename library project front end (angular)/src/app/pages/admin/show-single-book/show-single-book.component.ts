@@ -11,6 +11,7 @@ export class showsinglebookComponent implements OnInit {
   // viewSingleBook
   id: any;
   book: any = {};
+  pdfFilePath: any;
   constructor(private _global: GlobalService,
     private route: ActivatedRoute, private router: Router) { }
 
@@ -37,5 +38,10 @@ export class showsinglebookComponent implements OnInit {
         // }//final
       }
     )
+  }
+  downloadBookPdf(bookDist: any) {
+
+    this.pdfFilePath = "http://localhost:4200/" + bookDist
+    console.log(this.pdfFilePath)
   }
 }

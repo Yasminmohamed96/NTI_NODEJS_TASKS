@@ -10,11 +10,13 @@
             <h5 class="card-title"> {{book.price}}</h5>
             <label>added At</label>
             <h5 class="card-title"> {{book.createdAt}}</h5>
-            <!-- <button class="card-text" (click)="downloadBookPdf(book.bookDist)"> view </button><br> -->
+            <button class="card-text" (click)="downloadBookPdf(book.bookDist)"> view </button><br>
+            <!-- <a [href]="'http://localhost:4200/'+book.bookDist">view</a> -->
 
         </div>
     </div>
 </div>
 <div>
-    <!-- <pdf-viewer [src]="pdfFilePath" [render-text]="true" style="display: block;"></pdf-viewer> -->
+    <!-- <a [href]="pdfFilePath"></a> -->
+    <pdf-viewer [src]="pdfFilePath" [render-text]="true" style="display: block;"></pdf-viewer>
 </div>

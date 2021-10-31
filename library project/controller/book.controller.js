@@ -58,7 +58,7 @@ class BookController {
     try {
       let id = req.params.id;
       const data = await Book.findById(id);
-      let place = req.file.path;
+      let place = "assets/" + req.file.filename;
       data.bookDist = place;
       await data.save();
       res.status(200).send({

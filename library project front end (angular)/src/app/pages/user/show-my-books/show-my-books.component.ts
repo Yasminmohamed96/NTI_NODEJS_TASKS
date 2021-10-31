@@ -9,7 +9,7 @@ import { GlobalService } from 'src/app/providers/services/global.service';
 })
 export class ShowMyBooksComponent implements OnInit {
   myBooks: any = {}
-  pdfFilePath = "http://localhost:3000/findAsset/public/1634942944641.pdf"
+  pdfFilePath: any
   constructor(private _global: GlobalService,
     private router: Router) { }
 
@@ -29,12 +29,10 @@ export class ShowMyBooksComponent implements OnInit {
       }
     )
   }
-  //pdfFilePath = "https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf";
-  // <img src="http://localhost:3000/public/1.png">
-  //http://localhost:3000/findAsset/{{userData.image}}
-  // downloadBookPdf(bookDist: any) {
 
-  //   this.pdfFilePath = "http://localhost:3000/findAsset/" + bookDist
-  //   console.log(this.pdfFilePath)
-  // }
+  downloadBookPdf(bookDist: any) {
+
+    this.pdfFilePath = "http://localhost:4200/" + bookDist
+    console.log(this.pdfFilePath)
+  }
 }

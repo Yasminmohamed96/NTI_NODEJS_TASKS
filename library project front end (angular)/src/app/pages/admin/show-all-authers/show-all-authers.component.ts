@@ -32,7 +32,8 @@ export class ShowAllAuthersComponent implements OnInit {
     this.router.navigateByUrl('/admin/editAuthre/' + id.toString())
   }
 
-  deletee(id: any) {
+  deletee(id: any, index: any) {
+    this.allAuthers.splice(index, 1);
     this._global.deleteAuther(id).subscribe(
       (res) => { },
       (err) => {

@@ -9,7 +9,8 @@ const storage = multer.diskStorage({
   destination: function(req, file, cb) {
     let loc;
     // if (req.user) loc = path.join("uploads", req.user._id.toString());
-    loc = path.join("uploads", "pdfs");
+    // loc = path.join("uploads", "pdfs");
+    loc = "Y://WEB/nti-js/session17/src/assets";
     fs.mkdir(loc, err => {});
     cb(null, loc);
   },

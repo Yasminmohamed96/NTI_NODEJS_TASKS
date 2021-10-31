@@ -30,46 +30,49 @@ import { ShowMyBooksComponent } from './pages/user/show-my-books/show-my-books.c
 import { ShowSingleBookComponent } from './pages/user/show-single-book/show-single-book.component';
 import { ShowallauthersComponent } from './pages/user/showallauthers/showallauthers.component';
 import { ShowsingleautherComponent } from './pages/user/showsingleauther/showsingleauther.component';
+import { IsAdminGuard } from './providers/gaurd/is-admin.guard';
+import { LoggedGuard } from './providers/gaurd/logged.guard';
+import { NotLoggedGuard } from './providers/gaurd/not-logged.guard';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
   {
     path: "user", children: [
-      { path: "", component: ProfileComponent },
-      { path: "profile", component: ProfileComponent },
+      { path: "", component: ProfileComponent, canActivate: [LoggedGuard] },
+      { path: "profile", component: ProfileComponent, canActivate: [LoggedGuard] },
       { path: "register", component: RegisterComponent },
-      { path: "register2", component: Register2Component },
-      { path: "activate/:id", component: ActivateComponent },
-      { path: "login", component: LoginComponent },
-      { path: "editProfile1", component: EditProfileComponent },
-      { path: "showMyBooks", component: ShowMyBooksComponent },
-      { path: "showAllBooks", component: ShowAllBooksComponent },
-      { path: "showallauthers", component: ShowallauthersComponent },
+      { path: "register2", component: Register2Component, canActivate: [LoggedGuard] },
+      { path: "activate/:id", component: ActivateComponent, canActivate: [LoggedGuard] },
+      { path: "login", component: LoginComponent, canActivate: [NotLoggedGuard] },
+      { path: "editProfile1", component: EditProfileComponent, canActivate: [LoggedGuard] },
+      { path: "showMyBooks", component: ShowMyBooksComponent, canActivate: [LoggedGuard] },
+      { path: "showAllBooks", component: ShowAllBooksComponent, canActivate: [LoggedGuard] },
+      { path: "showallauthers", component: ShowallauthersComponent, canActivate: [LoggedGuard] },
 
 
     ]
   },
   {
     path: "admin", children: [
-      { path: "adminprofile", component: AdminProfileComponent },
-      { path: "addUser", component: AddUserComponent },
-      { path: "login", component: AdminLoginComponent },
-      { path: "showAllUsers", component: ShowAllUsersComponent },
-      { path: "showSingleUser/:id", component: ShowSingleUserComponent },
-      { path: "deleteUser/:id", component: DeleteUserComponent },
-      { path: "editProfile/:id", component: EditUserComponent },
+      { path: "adminprofile", component: AdminProfileComponent, canActivate: [IsAdminGuard] },
+      { path: "addUser", component: AddUserComponent, canActivate: [IsAdminGuard] },
+      { path: "login", component: AdminLoginComponent, canActivate: [IsAdminGuard] },
+      { path: "showAllUsers", component: ShowAllUsersComponent, canActivate: [IsAdminGuard] },
+      { path: "showSingleUser/:id", component: ShowSingleUserComponent, canActivate: [IsAdminGuard] },
+      { path: "deleteUser/:id", component: DeleteUserComponent, canActivate: [IsAdminGuard] },
+      { path: "editProfile/:id", component: EditUserComponent, canActivate: [IsAdminGuard] },
 
-      { path: "addBook/:id", component: AddBookDataComponent },
-      { path: "addPdf/:id", component: AddBookPdfComponent },
-      { path: "showAllBooks", component: showallBooksComponent },
-      { path: "deleteBook/:id", component: DeleteBookComponent },
-      { path: "showsinglebook/:id", component: showsinglebookComponent },
+      { path: "addBook/:id", component: AddBookDataComponent, canActivate: [IsAdminGuard] },
+      { path: "addPdf/:id", component: AddBookPdfComponent, canActivate: [IsAdminGuard] },
+      { path: "showAllBooks", component: showallBooksComponent, canActivate: [IsAdminGuard] },
+      { path: "deleteBook/:id", component: DeleteBookComponent, canActivate: [IsAdminGuard] },
+      { path: "showsinglebook/:id", component: showsinglebookComponent, canActivate: [IsAdminGuard] },
 
-      { path: "addAuthre", component: AddAutherComponent },
-      { path: "editAuthre/:id", component: EditAutherComponent },
-      { path: "showAllAuthers", component: ShowAllAuthersComponent },
-      { path: "deleteAuthre/:id", component: DeleteAutherComponent },
-      { path: "showSingleAuthre/:id", component: ShowSingleAutherComponent }
+      { path: "addAuthre", component: AddAutherComponent, canActivate: [IsAdminGuard] },
+      { path: "editAuthre/:id", component: EditAutherComponent, canActivate: [IsAdminGuard] },
+      { path: "showAllAuthers", component: ShowAllAuthersComponent, canActivate: [IsAdminGuard] },
+      { path: "deleteAuthre/:id", component: DeleteAutherComponent, canActivate: [IsAdminGuard] },
+      { path: "showSingleAuthre/:id", component: ShowSingleAutherComponent, canActivate: [IsAdminGuard] }
 
 
 

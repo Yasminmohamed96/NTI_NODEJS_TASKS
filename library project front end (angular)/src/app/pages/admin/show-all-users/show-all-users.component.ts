@@ -31,7 +31,8 @@ export class ShowAllUsersComponent implements OnInit {
     this.router.navigateByUrl('/admin/editProfile/' + id.toString())
   }
 
-  deleteUser(id: any) {
+  deleteUser(id: any, index: any) {
+    this.allUsers.splice(index, 1);
     this._global.deleteUserData(id).subscribe(
       (res) => { },
       (err) => {
